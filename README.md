@@ -24,3 +24,17 @@ const INITIAL_DATE = [2018, 11 - 1, 24];
 - In the project directory, run `npm run start`
 
 Tomorrow, run `npm run start` again. It'll compare your system's date against the `INITIAL_DATE` you entered, to figure out which cards you need to review.
+
+### Even easier
+
+You can add a Bash alias to make it even easier to use this program.
+
+I added the following line to my `.bashrc` program:
+
+```bash
+alias leitner="node /Users/joshuacomeau/work/leitner"
+
+# NOTE: Run `source ~/.bashrc` after making the change to use right away. Or reopen the terminal.
+```
+
+Then, in the CLI, I can easily just type `leitner` from anywhere in the filesystem, and see which cards I need to review :D

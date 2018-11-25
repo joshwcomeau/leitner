@@ -4,8 +4,8 @@ const colors = require('colors/safe');
 require('colors');
 
 // Update me, at your own peril >:o
-// November 22nd (remember, months are 0-indexed, for no discernable reason)
-const INITIAL_DATE = [2018, 11 - 1, 24];
+// November 25nd (remember, months are 0-indexed, for no discernable reason)
+const INITIAL_DATE = [2018, 11 - 1, 25];
 
 const run = currentDateArr => {
   const startDate = new Date(...INITIAL_DATE);
