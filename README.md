@@ -1,10 +1,10 @@
 # Leitner schedule
 
-I recently read Nicky Case's amazing Explorable Explanation, ["How To Remember Anything Forever-ish"](https://ncase.me/remember/). It involves the construction of a Leitner box, to practice spaced repetition. It's really good, you should read it!
+I recently read Nicky Case's amazing Explorable Explanation, ["How To Remember Anything Forever-ish"](https://ncase.me/remember/). This explorable teaches a science-backed method for long-term retention, and I'm super excited to develop this new super-power.
 
-The game works on a **64-day calendar**. While the explorable provides instructions for creating your own calendar out of index cards, I prefer to have it digital, to prevent any confusion/issues.
+You can create cards with mobile and web apps, but it's more fun to have a tangible box using index cards. The trouble, though, is that you need some way to keep track of which cards to review on which day - the game works on a **64-day calendar**. While the explorable provides instructions for creating your own calendar, I worry that it wouldn't work so well for me: it relies on manually advancing a "current day" indicator, and that feels like something I'd forget to do.
 
-This CLI utility is simple. It tells you which cards to review today.
+So, I created this super-rudimentary CLI for tracking it. Run a command and it tells you which cards to review today. It could be better - contributions welcome - but it fits my needs.
 
 ### Setup and Running
 
@@ -21,13 +21,13 @@ const INITIAL_DATE = [2018, 11 - 1, 24];
 // month, instead of `11`.)
 ```
 
-- In the project directory, run `npm run start`
+- In the project directory, run `node index.js`. It'll tell you which cards to review!
 
-Tomorrow, run `npm run start` again. It'll compare your system's date against the `INITIAL_DATE` you entered, to figure out which cards you need to review.
+- Tomorrow, run `npm run start` again. It'll compare your system's date against the `INITIAL_DATE` you entered, to figure out which cards you need to review.
 
-### Even easier
+### Bash alias
 
-You can add a Bash alias to make it even easier to use this program.
+I'm lazy, and I didn't want to have to `cd` into this project directory every day. So I created a quick alias on my machine.
 
 I added the following line to my `.bashrc` program:
 
@@ -37,4 +37,4 @@ alias leitner="node /Users/joshuacomeau/work/leitner"
 # NOTE: Run `source ~/.bashrc` after making the change to use right away. Or reopen the terminal.
 ```
 
-Then, in the CLI, I can easily just type `leitner` from anywhere in the filesystem, and see which cards I need to review :D
+This way, you can run `leitner` from anywhere in the filesystem.
